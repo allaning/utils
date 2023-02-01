@@ -62,18 +62,18 @@ def main(args):
 
                     if not line:
                         break
-                    print("Line: {}".format(line.strip()))
+                    print("  {}".format(line.strip()))
                     outfile.write(line)
 
                     if count % max_lines == 0:
                         # Close previous output file and start a new one
                         outfile.close()
                         output_filename = input_filename_parts[0] + "-" + str(int(count/max_lines)) + input_filename_parts[1]
+                        print("-----------------------------------" + str(count))
                         print("Generating {}...".format(output_filename))
                         outfile = open(output_filename, 'w')
 
                         # Add header
-                        print("-----------------------------------" + str(count))
                         print(preamble)
                         outfile.writelines(preamble)
 
