@@ -22,6 +22,7 @@
 #   - Subtitle Availability: yt-dlp can only download subtitles that are available on the YouTube video. Some videos may not have any, or only have auto-generated ones.
 
 import yt_dlp
+import ffmpeg
 import argparse
 
 def download_youtube_video(url, download_subtitles=False, subtitle_langs=['en'], embed_subtitles=False, max_resolution=None):
